@@ -1,0 +1,35 @@
+#photos {
+	.slideshow-container {
+		margin-right:0;
+		margin-left:0;
+		margin-top:30px;
+		display:block;
+		position:relative;
+
+		a {
+			position: absolute;
+			display: block;
+			width: 50px;
+			height: 50px;
+			background: #333;
+			opacity: 0.5;
+			border-radius: 50%;
+			
+			.paddle-left{
+				left:50%;
+				margin-left: -200px;
+			}
+
+			.paddle-right{
+				left:50%;
+				margin-left: -200px;
+			}
+
+		}
+
+		ul {
+			position: absolute;
+			list-style-type: none;
+		}
+	}	
+}

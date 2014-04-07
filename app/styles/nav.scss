@@ -1,0 +1,75 @@
+
+@import 'helpers';
+
+nav {
+    height:140px;
+    position: fixed;
+    background: url('../images/nav_bg.png');
+    width:2000px;
+    text-transform: uppercase;
+    left:50%;
+    margin-left: -1000px;
+    top: 0;
+    color: #000;
+    z-index: 1000;
+    font-weight: bold;
+    @include shadowed(0px, 0px, 8px, #4f4f4f);
+    font-size: 1em;
+    
+    .nav li {
+        position:absolute;
+        float:left;
+    }
+
+    .nav li a {
+        color: #000;
+        margin-top:12px;
+    }
+
+    .nav li a:hover {
+        color: #333;
+        background: transparent;
+    }
+
+    p {
+        color:#000;
+    }
+
+    .about {
+        left:50%;
+        margin-left: -480px;
+    }
+
+    .photos {
+        left:50%;
+        margin-left: -220px;
+    }
+
+    .proposal {
+        left:50%;
+        margin-left: -390px;
+    }
+
+    .wedding {
+        left:50%;
+        margin-left: 124px;
+    }
+
+    .registry {
+        left:50%;
+        margin-left: 282px;
+    }
+
+    .rsvp {
+        left:50%;
+        margin-left: 410px;
+    }
+
+    .date {
+        position: absolute;
+        top:85px;
+        left:50%;
+        margin-left: -68px;
+    }
+
+}

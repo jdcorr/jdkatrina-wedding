@@ -1,0 +1,28 @@
+#about {
+	display:block;
+	padding-bottom: 50px;
+	text-align:center;
+
+	.main-about {
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
+		width:85%
+	}
+
+	.about-bride {
+		padding:0 20px;
+	}
+
+	.about-groom {
+		padding:0 20px;
+	}
+
+	p {
+		padding-bottom: 30px;
+	}
+
+	@media (max-width: 600px) {
+		// mobile styles
+	}
+}
