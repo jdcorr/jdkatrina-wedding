@@ -5,6 +5,6 @@ jdkatrina-wedding
 
 Site uses Angular-fullstack generator for Yeoman. To run simply,
 
-/
+//
  grunt serve
-/
+//
