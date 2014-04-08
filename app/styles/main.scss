@@ -9,6 +9,7 @@ $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/
 @import 'wedding';
 @import 'registry';
 @import 'rsvp';
+@import 'comments';
 
 $mediumGray: #8f8f8f;
 
@@ -34,11 +35,6 @@ h2 {
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-}
-
-.main-image {
-    width: 100%;
-    height: auto;
 }
 
 /* Everything but the jumbotron gets side spacing for mobile first views */

@@ -6,6 +6,7 @@
 		margin-top:30px;
 		display:block;
 		position:relative;
+		background: #ccc;
 
 		a {
 			display: block;
@@ -34,6 +35,12 @@
 			margin-left:0;
 			padding-left:0;
 			list-style-type: none;
+		}
+
+		.slideshow-image {
+			width:85%;
+			margin-left: auto;
+			margin-right: auto;
 		}
 	}	
 
