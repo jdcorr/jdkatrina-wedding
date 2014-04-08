@@ -2,12 +2,12 @@
 	.slideshow-container {
 		margin-right:0;
 		margin-left:0;
+		padding-left:0;
 		margin-top:30px;
 		display:block;
 		position:relative;
 
 		a {
-			position: absolute;
 			display: block;
 			width: 50px;
 			height: 50px;
@@ -16,20 +16,28 @@
 			border-radius: 50%;
 			
 			.paddle-left{
+				z-index:100;
+				position: absolute;
 				left:50%;
 				margin-left: -200px;
 			}
 
 			.paddle-right{
+				z-index:200;
+				position: absolute;
 				left:50%;
-				margin-left: -200px;
+				margin-left: 200px;
 			}
-
 		}
 
 		ul {
-			position: absolute;
+			margin-left:0;
+			padding-left:0;
 			list-style-type: none;
 		}
 	}	
+
+	h2 {
+		content: url('../images/photos_hdr.png');
+	}
 }

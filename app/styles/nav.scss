@@ -12,7 +12,6 @@ nav {
     top: 0;
     color: #000;
     z-index: 1000;
-    font-weight: bold;
     @include shadowed(0px, 0px, 8px, #4f4f4f);
     font-size: 1em;
     
@@ -23,7 +22,7 @@ nav {
 
     .nav li a {
         color: #000;
-        margin-top:12px;
+        margin-top:11px;
     }
 
     .nav li a:hover {

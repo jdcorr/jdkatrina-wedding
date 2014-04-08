@@ -7,15 +7,27 @@
 		display: block;
 		margin-right: auto;
 		margin-left: auto;
-		width:85%
+		width:85%;
+
+		h2 {
+			content: url('../images/about_hdr.png');
+		}
 	}
 
 	.about-bride {
 		padding:0 20px;
+
+		h2 {
+			content: url('../images/katrina_hdr.png');
+		}
 	}
 
 	.about-groom {
 		padding:0 20px;
+
+		h2 {
+			content: url('../images/jd_hdr.png');
+		}
 	}
 
 	p {
