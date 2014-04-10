@@ -1,20 +1,28 @@
+div(ng-include='\'partials/mixins\'')
 div(ng-include='\'partials/navbar\'')
+
+mixin hRule(iconsprite)
+  hr(class=iconsprite)
 
 section#about.container
   img.main-image(src="images/main.jpg", alt="JD and Katrina at Natural Bridges, CA")
   .main-about
     h2 About us
     p Lorem ipsum Aliqua consequat magna nostrud mollit commodo ea est consequat nostrud nulla dolor culpa in ad do occaecat adipisicing incididunt incididunt commodo ut laboris et magna tempor consectetur elit enim elit qui officia consequat exercitation occaecat id culpa nostrud sit sit elit incididunt ut do elit dolore Duis et cupidatat nostrud officia exercitation esse non enim ex consequat fugiat nostrud ut est in veniam in commodo aliquip esse laboris pariatur in non qui id esse est in et enim cupidatat qui velit eu aliquip ullamco nisi anim in nulla dolore minim sint deserunt minim in exercitation do dolore reprehenderit dolor dolore eu Excepteur amet in culpa ad non id occaecat consectetur ullamco mollit Duis Duis enim ut nulla Excepteur labore aute aliquip voluptate Ut tempor ut minim cupidatat ea nulla nisi est sunt proident amet ex laboris Ut est Ut quis voluptate incididunt ad cillum enim deserunt sed pariatur deserunt non laboris id et esse dolor id cillum ut in in in quis incididunt qui cupidatat enim ea fugiat Ut mollit Ut aliquip aliquip laborum proident culpa voluptate fugiat commodo in exercitation commodo enim sunt aliquip cupidatat.
+    +hRule('toast')
   .about-bride.col-md-6
     h2 Katrina Hassler
     p Lorem ipsum Cillum fugiat dolor anim consectetur adipisicing eu dolor ut qui officia culpa sunt dolor ex dolor magna non commodo id in anim Duis in eu irure commodo anim cupidatat reprehenderit.
+    +hRule('bride')
   .about-groom.col-md-6
     h2 JD Corr
     p Lorem ipsum Exercitation ullamco cillum occaecat qui proident mollit commodo nulla ex id officia proident non commodo amet tempor non aute deserunt proident velit id et tempor.
+    +hRule('groom')
 
 section#proposal.container
   h2 The Proposal
   p Lorem ipsum Aliquip magna sunt cillum consequat est ea cillum pariatur laboris est incididunt dolore aliquip eiusmod Ut dolor reprehenderit laboris reprehenderit exercitation reprehenderit laborum minim ut magna ut. Lorem ipsum Aliquip magna sunt cillum consequat est ea cillum pariatur laboris est incididunt dolore aliquip eiusmod Ut dolor reprehenderit laboris reprehenderit exercitation reprehenderit laborum minim ut magna ut.
+  +hRule('toast')
 
 section#photos.container
   h2 Photos
@@ -26,17 +34,20 @@ section#photos.container
       i.glyphicon-chevron-left
     a.paddle-right
       i.glyphicon-chevron-right
+  +hRule('groom')
 
 section#wedding
   h2 The Wedding
   p Lorem ipsum Ullamco et Excepteur sit ullamco incididunt deserunt dolor nisi eu sint dolore non nisi amet dolor est eiusmod fugiat nisi fugiat Duis pariatur commodo officia Excepteur elit nisi voluptate ex aute sit consequat id ut aliquip aliquip nostrud tempor irure sint enim ullamco magna esse in anim ut ea ut esse ex cillum fugiat culpa do consequat cillum deserunt ullamco reprehenderit Duis sit sit esse minim mollit laboris dolor dolor voluptate fugiat labore dolore tempor pariatur pariatur nulla aliquip adipisicing enim minim elit irure non ea esse aliqua labore commodo ad magna qui officia occaecat velit consequat in do nostrud cillum reprehenderit ut ullamco ex voluptate ea cupidatat aute do voluptate id culpa fugiat incididunt quis aute in elit occaecat culpa sed tempor non esse aute ea cupidatat Ut eu nisi minim sit ullamco irure dolore laborum minim reprehenderit officia ex irure mollit exercitation voluptate et in nulla culpa reprehenderit non.
   #map-canvas.full-width
   //- add nearby hotels, driving directions, etc...
+  +hRule('toast')
 
 section#registry.container
   h2 Registry
   p Lorem ipsum Ullamco et Excepteur sit ullamco incididunt deserunt dolor nisi eu sint dolore non nisi amet dolor est eiusmod fugiat nisi fugiat Duis pariatur commodo officia Excepteur elit nisi voluptate ex aute sit consequat id ut aliquip aliquip nostrud tempor irure sint enim ullamco magna esse in anim ut ea ut esse ex cillum fugiat culpa do consequat cillum deserunt ullamco reprehenderit Duis sit sit esse minim mollit laboris dolor dolor voluptate fugiat labore dolore tempor pariatur pariatur nulla aliquip adipisicing enim minim elit irure non ea esse aliqua labore commodo ad magna qui officia occaecat velit consequat in do nostrud cillum reprehenderit ut ullamco ex voluptate ea cupidatat aute do voluptate id culpa fugiat incididunt quis aute in elit occaecat culpa sed tempor non esse aute ea cupidatat Ut eu nisi minim sit ullamco irure dolore laborum minim reprehenderit officia ex irure mollit exercitation voluptate et in nulla culpa reprehenderit non.
   img.grid-image(src="images/registry_grid.jpg", alt="Ana Furniture").col-md-10.col-md-offset-1
+
 section#rsvp
 
 section#comments.container
@@ -56,17 +67,6 @@ section#comments.container
     comments powered by 
       span.logo-disqus
         Disqus
-
-//- .jumbotron
-//-   h1
-//-     | 'Allo, 'Allo!
-
-//-   p.lead
-//-     <img src="images/yeoman.png" alt="I'm Yeoman">
-//-     br
-//-     | Always a pleasure scaffolding your apps.
-//-   p
-//-     a.btn.btn-lg.btn-success(ng-href='#') Splendid!
-    
+   
 //- footer
 //-   p ♥ from JD & Katrina

@@ -37,6 +37,28 @@ h2 {
     margin-left: auto;
 }
 
+hr {
+    color:#333;
+    width:70%;
+    padding-top: 10px;
+    text-align: center;
+
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    -ms-box-sizing: content-box;
+    -o-box-sizing: content-box;
+    box-sizing: content-box;
+
+    .toast {
+        &:after {
+            color: #999;
+            background: #fff;
+            display: inline-block; 
+            content: url('../images/icons/toast.png');
+        }
+    }
+}
+
 /* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
 .marketing,

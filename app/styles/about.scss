@@ -1,6 +1,5 @@
 #about {
 	display:block;
-	padding-bottom: 50px;
 	text-align:center;
 
 	.main-about {
@@ -32,10 +31,6 @@
 		h2 {
 			content: url('../images/jd_hdr.png');
 		}
-	}
-
-	p {
-		padding-bottom: 30px;
 	}
 
 	@media (max-width: 600px) {
