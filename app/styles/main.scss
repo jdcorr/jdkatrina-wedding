@@ -38,7 +38,8 @@ h2 {
 }
 
 hr {
-    color:#333;
+    border-color:#ccc;
+    line-height: 1px;
     width:70%;
     padding-top: 10px;
     text-align: center;
@@ -49,13 +50,29 @@ hr {
     -o-box-sizing: content-box;
     box-sizing: content-box;
 
-    .toast {
-        &:after {
-            color: #999;
-            background: #fff;
-            display: inline-block; 
-            content: url('../images/icons/toast.png');
-        }
+    &:after {
+        color: #999;
+        background: #fff;
+        display: inline-block;
+    }
+
+    &.toast:after { 
+        content: url('../images/icons/toast.png');
+        margin-top:-50px;
+    }
+
+    &.bride:after { 
+        content: url('../images/icons/bride.png');
+        margin-top:-70px;
+    }
+
+    &.groom:after { 
+        content: url('../images/icons/groom.png');
+        margin-top:-70px;
+    }
+
+    &.feather:after {
+        content: url('../images/icons/feather.png');
     }
 }
 

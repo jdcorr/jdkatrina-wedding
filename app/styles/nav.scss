@@ -37,6 +37,10 @@ nav {
     .about {
         left:50%;
         margin-left: -480px;
+
+        &:active {
+            color: #385D7A;
+        }
     }
 
     .photos {
