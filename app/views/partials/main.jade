@@ -30,12 +30,12 @@ section#photos.container
     ul.slideshow
       li.slide
     a.paddle-left
-      i.glyphicon-chevron-left
+      span.glyphicon.glyphicon-chevron-left
     a.paddle-right
-      i.glyphicon-chevron-right
+      span.glyphicon.glyphicon-chevron-right
   +hRule('feather')
 
-section#wedding
+section#wedding.container
   h2 The Wedding
   p Lorem ipsum Ullamco et Excepteur sit ullamco incididunt deserunt dolor nisi eu sint dolore non nisi amet dolor est eiusmod fugiat nisi fugiat Duis pariatur commodo officia Excepteur elit nisi voluptate ex aute sit consequat id ut aliquip aliquip nostrud tempor irure sint enim ullamco magna esse in anim ut ea ut esse ex cillum fugiat culpa do consequat cillum deserunt ullamco reprehenderit Duis sit sit esse minim mollit laboris dolor dolor voluptate fugiat labore dolore tempor pariatur pariatur nulla aliquip adipisicing enim minim elit irure non ea esse aliqua labore commodo ad magna qui officia occaecat velit consequat in do nostrud cillum reprehenderit ut ullamco ex voluptate ea cupidatat aute do voluptate id culpa fugiat incididunt quis aute in elit occaecat culpa sed tempor non esse aute ea cupidatat Ut eu nisi minim sit ullamco irure dolore laborum minim reprehenderit officia ex irure mollit exercitation voluptate et in nulla culpa reprehenderit non.
   #map-canvas.full-width
@@ -48,11 +48,15 @@ section#registry.container
   img.grid-image(src="images/registry_grid.jpg", alt="Ana Furniture").col-md-10.col-md-offset-1
   +hRule('toast')
 
-section#rsvp
+section#rsvp.container
+  h2 RSVP
+  p To rsvp online, please begin by entering the rsvp code on your invitation. If you are unable to locate the code or have misplaced it, please 
+    a(href='mailto:rsvp@jdandkatrina.com') contact us
+    |.
 
 section#comments.container
   h2 Comments
-  #disqus_thread.col-md-10.col-md-offset-1
+  #disqus_thread
   script.
     var disqus_shortname = 'jdandkatrina';
 

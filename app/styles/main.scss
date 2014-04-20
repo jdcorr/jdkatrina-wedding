@@ -21,7 +21,10 @@ body {
 
 p {
     color: $mediumGray;
+}
 
+a {
+    cursor: pointer;
 }
 
 section {
@@ -77,17 +80,10 @@ hr {
     }
 }
 
-/* Everything but the jumbotron gets side spacing for mobile first views */
 .header,
-.marketing,
 .footer {
     padding-left: 15px;
     padding-right: 15px;
-}
-
-/* Custom page header */
-.header {
-    border-bottom: 1px solid #e5e5e5;
 }
 
 /* Make the masthead heading the same height as the navigation */

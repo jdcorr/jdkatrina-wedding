@@ -2,6 +2,6 @@
   nav
     ul.nav
       li(class='{{item.class}}', ng-repeat='item in menu', ng-class='{active: isActive(item.link)}')
-        a(ng-href='{{item.link}}') {{item.title}}
+        a(ng-click='gotoAnchor(item.link)') {{item.title}}
     p.date October 18, 2014
  

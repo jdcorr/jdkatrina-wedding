@@ -9,7 +9,7 @@ html.no-js
     meta(charset="utf-8")
     meta(http-equiv="X-UA-Compatible", content="IE=edge,chrome=1")
     base(href="/")
-    title JD & Katrina
+    title Katrina Hassler & JD Corr
     meta(name="description", content="The wedding for Katrina Hassler and JD Corr commencing on October 18, 2014.")
     meta(name="viewport", content="width=device-width")
     // Place favicon.ico and apple-touch-icon.png in the root directory
@@ -20,17 +20,16 @@ html.no-js
     <!-- build:css({.tmp,app}) styles/main.css -->
     <link rel="stylesheet" href="styles/main.css">
     <link href='http://fonts.googleapis.com/css?family=Montserrat:400,700' rel='stylesheet' type='text/css'>
-    //- <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHuYrWEc-ZQWDy0Ap1H2KNeaVGxqE-0iU&sensor=false"></script>
-    //- script.
-    //-   function initialize() {
-    //-     var mapOptions = {
-    //-       center: new google.maps.LatLng(-34.397, 150.644),
-    //-       zoom: 8
-    //-     };
-    //-     var map = new google.maps.Map(document.getElementById("map-canvas"),
-    //-         mapOptions);
-    //-   }
-    //-   google.maps.event.addDomListener(window, 'load', initialize);
+    script.
+      function initialize() {
+        var mapOptions = {
+          center: new google.maps.LatLng(-34.397, 150.644),
+          zoom: 8,
+          mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map-canvas"), mapOptions);
+      }
+      google.maps.event.addDomListener(window, 'load', initialize);
     <!-- endbuild -->
   body(ng-app="jandkApp")
     //[if lt IE 7]>
@@ -66,5 +65,7 @@ html.no-js
     <script src="scripts/app.js"></script>
     <script src="scripts/controllers/main.js"></script>
     <script src="scripts/controllers/navbar.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCHuYrWEc-ZQWDy0Ap1H2KNeaVGxqE-0iU&sensor=false"></script>
+    <script type="text/javascript" language="javascript" src="scripts/trunk.js"></script>
     <!-- endbuild -->
     
