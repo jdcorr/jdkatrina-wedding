@@ -1,8 +1,8 @@
 @mixin shadowed($top, $left, $blur, $color){ 
 	-webkit-filter: drop-shadow($top $left $blur $color);
-	filter: url(#drop-shadow);
+	//filter: url(#drop-shadow);
 	-ms-filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX="+$left+", OffY="+$top+", Color='"+$color+"')";
-    filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX="+$left+", OffY="+$top+", Color='"+$color+"')";
+    //filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX="+$left+", OffY="+$top+", Color='"+$color+"')";
 }
 
 @mixin no-select {

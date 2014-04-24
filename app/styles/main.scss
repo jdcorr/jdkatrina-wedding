@@ -38,6 +38,11 @@ h2 {
     text-align: center;
     margin-right: auto;
     margin-left: auto;
+    text-indent: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    background-position:center bottom;
+    background-repeat: no-repeat;
 }
 
 hr {
