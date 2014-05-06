@@ -3,12 +3,11 @@
 #photos {
 	@include no-select;
 	.slideshow-container {
-		margin-right:0;
-		margin-left:0;
-		padding-left:0;
-		margin-top:30px;
+		margin: 30px 0;
+		padding: 30px 0 30px;
 		position:relative;
-		min-height:400px;
+		min-height:460px;
+		background-color: #f0f0ef;
 
 		a {
 			display: block;
@@ -60,13 +59,11 @@
 		}
 
 		.slide {
-			@include shadowed(0px, 4px, 3px, #333);
 			width: 100%;
 			height: auto;
 			min-height:400px;
 			display:block;
-			position:absolute;
-			background-image: url('../images/slideshow/02.jpg');
+			background-image: url('../images/slideshow/03.jpg');
 			background-size: contain;
 			background-repeat: no-repeat;
 			background-position: center center;
