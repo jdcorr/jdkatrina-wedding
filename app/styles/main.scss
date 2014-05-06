@@ -51,6 +51,7 @@ hr {
     width:70%;
     padding-top: 10px;
     text-align: center;
+    position: relative;
 
     -webkit-box-sizing: content-box;
     -moz-box-sizing: content-box;
@@ -62,26 +63,33 @@ hr {
         color: #999;
         background: #fff;
         display: inline-block;
+        position: absolute;
+        left: 50%;
+
     }
 
     &.toast:after { 
         content: url('../images/icons/toast.png');
-        margin-top:-50px;
+        margin-left: -14px;
+        top: -12px;
     }
 
     &.bride:after { 
         content: url('../images/icons/bride.png');
-        margin-top:-70px;
+        margin-left: -14px;
+        top: -12px;
     }
 
     &.groom:after { 
         content: url('../images/icons/groom.png');
-        margin-top:-70px;
+        margin-left: -10px;
+        top: -7px;
     }
 
     &.feather:after {
         content: url('../images/icons/feather.png');
-        margin-top:-30px;
+        margin-left: -34px;
+        top: -23px;
     }
 }
 
@@ -124,7 +132,7 @@ hr {
 }
 
 /* Responsive: Portrait tablets and up */
-@media screen and (min-width: 768px) {
+@media (min-width: 769px) and (max-width: 1200px) {
 
     /* Remove the padding we set earlier */
     .header,
@@ -133,9 +141,46 @@ hr {
         padding-left: 0;
         padding-right: 0;
     }
+
+    section {
+        font-size:0.85em;
+    }
+
+    h2 {
+        background-size: auto 24px;
+    }
+
     /* Space out the masthead */
     .header {
         margin-bottom: 30px;
+    }
+    /* Remove the bottom border on the jumbotron for visual effect */
+    .jumbotron {
+        border-bottom: 0;
+    }
+}
+/* Responsive: Portrait tablets and up */
+@media screen and (max-width: 768px) {
+
+    /* Remove the padding we set earlier */
+    .header,
+    .marketing,
+    .footer {
+        padding-left: 0;
+        padding-right: 0;
+    }
+
+    section {
+        font-size:0.8em;
+    }
+
+    h2 {
+        background-size: auto 20px;
+    }
+
+    /* Space out the masthead */
+    .header {
+        margin-bottom: 20px;
     }
     /* Remove the bottom border on the jumbotron for visual effect */
     .jumbotron {

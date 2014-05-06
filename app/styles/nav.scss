@@ -1,92 +1,226 @@
 
 @import 'helpers';
 
-nav {
-    height:140px;
-    position: fixed;
-    background: url('../images/nav_bg.png');
-    width:2000px;
-    text-transform: uppercase;
-    left:50%;
-    margin-left: -1000px;
-    top: 0;
-    color: #000;
-    z-index: 1000;
-    @include shadowed(0, 0, 3px, #a0a0a0);
-    font-size: 0.9em;
-    
-    .nav li {
-        position:absolute;
-        float:left;
-    }
 
-    .nav li a {
+@media (min-width: 1201px) {
+    .header{
+        .logo {
+            position: fixed;
+            z-index: 1001;
+            top: 19px;
+            left: 50%;
+            margin-left: -103px;
+        }
+
+        .date {
+            font-size: 0.92em;
+            position: fixed;
+            top:87px;
+            left:50%;
+            margin-left: -58px;
+            z-index: 1001;
+            color: #000;
+            text-transform: uppercase;
+        }
+
         color: #000;
-        margin-top:11px;
     }
 
-    .nav li a:hover {
-        color: #333;
-        background: transparent;
-    }
-
-    p {
-        color:#000;
-    }
-
-    .about {
+    nav {
+        height:140px;
+        position: fixed;
+        background: url('../images/nav_bg.png');
+        background-size: 100;
+        width:2000px;
+        text-transform: uppercase;
         left:50%;
-        margin-left: -480px;
+        margin-left: -1000px;
+        top: 0;
+        color: #000;
+        z-index: 1000;
+        @include shadowed(0, 0, 3px, #a0a0a0);
+        font-size: 0.9em;
+        
+        .nav li {
+            position:absolute;
+            float:left;
+        }
 
-        &:active {
-            color: #385D7A;
+        .nav li a {
+            color: #000;
+            margin-top:11px;
+        }
+
+        .nav li a:hover {
+            color: #333;
+            background: transparent;
+        }
+
+        p {
+            color:#000;
+        }
+
+        .about {
+            left:50%;
+            margin-left: -480px;
+
+            &:active {
+                color: #385D7A;
+            }
+        }
+
+        .photos {
+            left:50%;
+            margin-left: -220px;
+        }
+
+        .proposal {
+            left:50%;
+            margin-left: -390px;
+        }
+
+        .wedding {
+            left:50%;
+            margin-left: 124px;
+        }
+
+        .registry {
+            left:50%;
+            margin-left: 282px;
+        }
+
+        .rsvp {
+            left:50%;
+            margin-left: 410px;
+        }
+    }
+}
+
+
+@media (min-width: 781px) and (max-width: 1200px) {
+
+    // small desktop styles
+    .header{
+        .logo {
+            position: fixed;
+            z-index: 1001;
+            top: 20px;
+            left: 50%;
+            margin-left: -83px;
+            width: 160px;
+            height: auto;
+        }
+
+        .date {
+            font-size: 0.7em;
+            position: fixed;
+            top: 75px;
+            left: 50%;
+            margin-left: -46px;
+            z-index: 1001;
+            color: #000;
+            text-transform: uppercase;
         }
     }
 
-    .photos {
+    nav {
+        height:120px;
+        position: fixed;
+        background: url('../images/nav_bg.png');
+        background-size:1600px 120px;
+        width:1500px;
+        text-transform: uppercase;
         left:50%;
-        margin-left: -220px;
-    }
+        margin-left: -800px;
+        top: 0;
+        color: #000;
+        z-index: 1000;
+        @include shadowed(0, 0, 3px, #a0a0a0);
+        font-size: 0.8em;
 
-    .proposal {
-        left:50%;
-        margin-left: -390px;
-    }
+        
+        .nav li {
+            position:absolute;
+            float:left;
+        }
 
-    .wedding {
-        left:50%;
-        margin-left: 124px;
-    }
+        .nav li a {
+            color: #000;
+            margin-top:11px;
+        }
 
-    .registry {
-        left:50%;
-        margin-left: 282px;
-    }
+        .nav li a:hover {
+            color: #333;
+            background: transparent;
+        }
 
-    .rsvp {
-        left:50%;
-        margin-left: 410px;
-    }
+        .nav li a:active {
+            color: #385D7A;
+        }
 
-    .date {
-        font-size: 0.92em;
-        position: absolute;
-        top:87px;
-        left:50%;
-        margin-left: -58px;
-    }
+        p {
+            color:#000;
+        }
 
+        .about {
+            left:50%;
+            margin-left: -322px;
+        }
+
+        .photos {
+            left:50%;
+            margin-left: -249px;
+        }
+
+        .proposal {
+            left:50%;
+            margin-left: -169px;
+        }
+
+        .wedding {
+            left:50%;
+            margin-left: 152px;
+        }
+
+        .registry {
+            left:50%;
+            margin-left: 265px;
+        }
+
+        .rsvp {
+            left:50%;
+            margin-left: 361px;
+        }
+    }
 }
 
 @media (max-width: 780px) {
     // mobile styles
+    .header{
+        .logo {
+            display:block;
+            position:relative;
+            margin: 0 auto 5px;
+            width: 140px;
+            height: auto;
+            top: 0;
+            left: 0;
+        }
+
+        .date {
+            position: relative;
+            text-align: center;
+        }
+    }
+
     nav {
+
         display:block;
         height:100%;
         background: #cccccc;
         width:100%;
         overflow: hidden;
-        position:relative;
+        position:fixed;
         margin:0;
         @include shadowed(0, 0, 0, #a0a0a0);
         left:0;

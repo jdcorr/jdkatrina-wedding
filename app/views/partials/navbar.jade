@@ -1,7 +1,8 @@
 .header(ng-controller='NavbarCtrl')
+  img(src="images/logo.png" class="logo" alt="JD and Katrina Logo")
+  p.date October 18, 2014 
   nav
     ul.nav
       li(class='{{item.class}}', ng-repeat='item in menu', ng-class='{active: isActive(item.link)}')
         a(ng-click='gotoAnchor(item.link)') {{item.title}}
-    p.date October 18, 2014
- 
+
