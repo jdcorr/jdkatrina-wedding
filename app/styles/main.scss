@@ -1,6 +1,7 @@
 $icon-font-path: "/bower_components/bootstrap-sass-official/vendor/assets/fonts/bootstrap/";
 
 @import 'bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+@import 'fonts';
 @import 'helpers';
 @import 'nav';
 @import 'about';
@@ -17,6 +18,7 @@ body {
     font-family: 'Montserrat', sans-serif;
     padding-top: 20px;
     padding-bottom: 20px;
+    background: #fff;
 }
 
 p {
@@ -31,6 +33,15 @@ section {
     display:block;
     margin-top: 30px;
     margin-bottom: 50px;
+    z-index: 20;
+    background:#fff;
+}
+
+.main-container {
+    background: #fff;
+    position: absolute;
+    transition: left 0.4s ease-out;
+    -webkit-transition: left 0.4s ease-out;
 }
 
 h2 {
@@ -38,11 +49,7 @@ h2 {
     text-align: center;
     margin-right: auto;
     margin-left: auto;
-    text-indent: 100%;
-    white-space: nowrap;
-    overflow: hidden;
-    background-position:center bottom;
-    background-repeat: no-repeat;
+    font-family: "Voyage";
 }
 
 hr {
@@ -174,6 +181,10 @@ hr {
 
     section {
         font-size:0.8em;
+    }
+
+    body {
+        padding-top: 0;
     }
 
     // h2 {

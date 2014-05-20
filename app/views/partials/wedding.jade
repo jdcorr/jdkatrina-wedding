@@ -4,9 +4,20 @@ include mixins
   .container
     h2 The Wedding
     p Lorem ipsum Ullamco et Excepteur sit ullamco incididunt deserunt dolor nisi eu sint dolore non nisi amet dolor est eiusmod fugiat nisi fugiat Duis pariatur commodo officia Excepteur elit nisi voluptate ex aute sit consequat id ut aliquip aliquip nostrud tempor irure sint enim ullamco magna esse in anim ut ea ut esse ex cillum fugiat culpa do consequat cillum deserunt ullamco reprehenderit Duis sit sit esse minim mollit laboris dolor dolor voluptate fugiat labore dolore tempor pariatur pariatur nulla aliquip adipisicing enim minim elit irure non ea esse aliqua labore commodo ad magna qui officia occaecat velit consequat in do nostrud cillum reprehenderit ut ullamco ex voluptate ea cupidatat aute do voluptate id culpa fugiat incididunt quis aute in elit occaecat culpa sed tempor non esse aute ea cupidatat Ut eu nisi minim sit ullamco irure dolore laborum minim reprehenderit officia ex irure mollit exercitation voluptate et in nulla culpa reprehenderit non.
+    .ceremony-info.col-md-6
+      h2 Ceremony
+      +hRule('wave')
+      p A beachfront ceremony will take place promptly at 4:30pm on Asilomar State Beach. From Asilomar Conference Center, follow the path to the beach, cross the street and head to your right. Whether you are walking or driving, locate Mile Marker 3 and proceed down the path to the ceremony. 
+    .reception.col-md-6
+      h2 Reception
+      +hRule('feather')
+      p. 
+        Immediately following the ceremony, there will be a reception at Merrill Hall located in the Asilomar Conference Center. br
+        View 
+        a(href="the map") this map
+        for more info.
   .container-full
     google-map(center="map.center" zoom="map.zoom" draggable="true" options="map.options")
-      window(coords="map.center" show="true")
     h2 Accomodations
     .hotel.asilomar
       h4 Asilomar Conference Center
@@ -19,10 +30,8 @@ include mixins
     .hotel.pacificgardeninns
       h4 Pacific Gardens Inn  
       p.  
-        You CAN have pets here. 
-        Has 2 hot tubs. No pool. 
-        This is where we will be for the rehearsal dinner. 
-        I have a few rooms booked here but most are for family members. Please let me know if you want to stay here and I'll add more rooms to the reservations. Super easy to do. 
+        Pets are allowed at this location. This hotel offers a hot tub, but no pool.
+        The rehearsal dinner will take place here for the wedding party and immediate family. 
         831-646-9414
       a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
     .hotel.bestwestern

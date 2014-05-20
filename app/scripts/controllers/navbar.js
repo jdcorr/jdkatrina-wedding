@@ -2,6 +2,8 @@
 
 angular.module('jandkApp')
 .controller('NavbarCtrl', function ($scope, $location, $anchorScroll) {
+	$scope.mobileNavVisible = false;
+
 	$scope.menu = [
 		{
 		  'title': 'About',
@@ -43,5 +45,15 @@ angular.module('jandkApp')
 
 	$scope.isActive = function(route) {
 	  return route === $location.path();
+	};
+
+	$scope.toggleMobileNav = function() {
+		if (!$scope.mobileNavVisible) {
+			document.querySelector('.main-container').style.left = '150px';
+			$scope.mobileNavVisible = true;
+		} else {
+			document.querySelector('.main-container').style.left = '0';
+			$scope.mobileNavVisible = false;
+		}
 	};
 });
