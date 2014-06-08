@@ -53,4 +53,10 @@
 		margin-left: auto;
 		margin-right: auto;
 	}
+
+	@media (min-width: 1200px){
+		.d-btn.d-btn-freetype {
+			width: 340px;
+		}
+	}
 }
