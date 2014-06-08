@@ -3,7 +3,7 @@ include mixins
 #wedding(ng-controller='WeddingCtrl').container-full
   .container
     h2 The Wedding
-    p Lorem ipsum Ullamco et Excepteur sit ullamco incididunt deserunt dolor nisi eu sint dolore non nisi amet dolor est eiusmod fugiat nisi fugiat Duis pariatur commodo officia Excepteur elit nisi voluptate ex aute sit consequat id ut aliquip aliquip nostrud tempor irure sint enim ullamco magna esse in anim ut ea ut esse ex cillum fugiat culpa do consequat cillum deserunt ullamco reprehenderit Duis sit sit esse minim mollit laboris dolor dolor voluptate fugiat labore dolore tempor pariatur pariatur nulla aliquip adipisicing enim minim elit irure non ea esse aliqua labore commodo ad magna qui officia occaecat velit consequat in do nostrud cillum reprehenderit ut ullamco ex voluptate ea cupidatat aute do voluptate id culpa fugiat incididunt quis aute in elit occaecat culpa sed tempor non esse aute ea cupidatat Ut eu nisi minim sit ullamco irure dolore laborum minim reprehenderit officia ex irure mollit exercitation voluptate et in nulla culpa reprehenderit non.
+    p We are very much looking forward to sharing the big day with friends and family. If it ends anything our time together, it will be full of great times, laughs, and our loved ones. 
     .ceremony-info.col-md-6
       h2 Ceremony
       +hRule('wave')
@@ -11,57 +11,57 @@ include mixins
     .reception.col-md-6
       h2 Reception
       +hRule('feather')
-      p. 
-        Immediately following the ceremony, there will be a reception at Merrill Hall located in the Asilomar Conference Center. br
-        View 
-        a(href="the map") this map
-        for more info.
+      p Immediately following the ceremony, there will be a reception at Merrill Hall located in the Asilomar Conference Center. 
+        a(href="the map") View the Asilomar map
+        |  for more info.
   .container-full
     google-map(center="map.center" zoom="map.zoom" draggable="true" options="map.options")
     h2 Accomodations
-    .hotel.asilomar
-      h4 Asilomar Conference Center
-      p. 
-        It is best to book Asilomar online. 
-        Rooms run from 155-210 a night depending in the view and number of beds. 
-        They have a pool but no hot tub 
-        Here are some other options within walking distance. 
-      a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
-    .hotel.pacificgardeninns
-      h4 Pacific Gardens Inn  
-      p.  
-        Pets are allowed at this location. This hotel offers a hot tub, but no pool.
-        The rehearsal dinner will take place here for the wedding party and immediate family. 
-        831-646-9414
-      a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
-    .hotel.bestwestern
-      h4 Howard Johnson Inn 
-      p.
-        $135 Th 
-        $155 Friday-Sat 
-        No Pool here 
-      a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
-    .hotel.rosedaleinn
-      h4 Rosedale Inn  
-      p.  
-        No pool 
-        $140 Th 
-        $200 Friday-Sat 
-        For one bed 
-        2 queens in $207 
-        King Suite $225 
-        These rates are with AAA I believe. 
-        We have rooms saved here already.
-        831-646-9414   
-      a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
-    .hotel.deerhaveninn
-      h4 Deer Haven Inn 
-      p.
-        No pool. 
-        $120-145 Th 
-        $125-155 Friday-Sat. 
-        Prices vary between one king and 2 queens.
-        831-373-7784   
-      a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
-  //- add nearby hotels, driving directions, etc...
+    .hotel-container 
+      .hotel.asilomar
+        h4 Asilomar Conference Center
+        p. 
+          It is best to book Asilomar online. 
+          Rooms run from 155-210 a night depending in the view and number of beds. 
+          They have a pool but no hot tub 
+          Here are some other options within walking distance. 
+        a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
+      .hotel.pacificgardeninns
+        h4 Pacific Gardens Inn  
+        p.  
+          Pets are allowed at this location. This hotel offers a hot tub, but no pool.
+          The rehearsal dinner will take place here for the wedding party and immediate family. 
+          831-646-9414
+        a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
+      .hotel.bestwestern
+        h4 Howard Johnson Inn 
+        p.
+          $135 Th 
+          $155 Friday-Sat 
+          No Pool here 
+        a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
+      .hotel.rosedaleinn
+        h4 Rosedale Inn  
+        p.  
+          No pool 
+          $140 Th 
+          $200 Friday-Sat 
+          For one bed 
+          2 queens in $207 
+          King Suite $225 
+          These rates are with AAA I believe. 
+          We have rooms saved here already.
+          831-646-9414   
+        a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
+      .hotel.deerhaveninn
+        h4 Deer Haven Inn 
+        p.
+          No pool. 
+          $120-145 Th 
+          $125-155 Friday-Sat. 
+          Prices vary between one king and 2 queens.
+          831-373-7784   
+        a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
+
+    //- add nearby hotels, driving directions, etc...
   +hRule('toast')

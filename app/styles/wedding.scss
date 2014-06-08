@@ -22,12 +22,19 @@
 		margin: 30px 0; 
 	}
 
+	.hotel-container {
+		background-image: url(http://subtlepatterns.com/patterns/dark_wall.png);
+		background-repeat: repeat;
+		padding-top: 30px;
+		padding-bottom: 30px;
+	}
+
 	.hotel {
 		display: block;
 		border: solid 1px #ccc;
 		margin: 30px auto;
 		padding: 20px 10px;
-		@include shadowed(0, 0, 3px, #ccc);
+		//@include shadowed(0, 0, 3px, #ccc);
 		width: 50%;
 		background: #fff;
 		text-align: center;
