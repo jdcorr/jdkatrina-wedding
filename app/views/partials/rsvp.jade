@@ -1,5 +1,11 @@
-#rsvp.container
+#rsvp(ng-controller='RsvpCtrl').container-full
   h2 RSVP
-  p To rsvp online, please begin by entering the rsvp code on your invitation. If you are unable to locate the code or have misplaced it, please 
-    a(href='mailto:rsvp@jdandkatrina.com') contact us
-    |.
+  .dark-container  
+    .rsvp-form
+      p Enter the rsvp code on your invitation. If you are unable to locate the code or have misplaced it, please 
+        a(href='mailto:rsvp@jdandkatrina.com') contact us
+        |.
+      form  
+        input.rsvp-code-input(type="text", placeholder="Enter Code Here", max-length=5, required, ng-model="rsvpCode", ng-minlength="5", ng-maxlength="5", ng-change="checkForRSVPCode()", name="rsvp-input")
+        button.continue-btn(ng-click="validateCode()", ng-disabled="continueDisabled")
+          label Continue

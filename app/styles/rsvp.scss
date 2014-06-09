@@ -1,3 +1,30 @@
 #rsvp {
 	text-align: center;
+
+	.rsvp-form {
+		background: #fff;
+		padding: 30px 20px;
+		margin: 0 auto;
+		width: 65%;
+		max-width: 500px;
+
+		input {
+			height: 40px;
+			border-radius: 2px;
+			color: initial;
+			letter-spacing: normal;
+			word-spacing: normal;
+			text-transform: none;
+			text-indent: 0px;
+			text-shadow: none;
+			display: block;
+			text-align: center;
+			margin: 10px auto;
+		}
+
+		button {
+			display: block;
+			margin: 10px auto;
+		}
+	}
 }                           
