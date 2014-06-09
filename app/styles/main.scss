@@ -43,6 +43,13 @@ section {
     -webkit-transition: left 0.4s ease-out;
 }
 
+.dark-container {
+    background-image: url(http://subtlepatterns.com/patterns/dark_wall.png);
+    background-repeat: repeat;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+
 h2 {
     padding-top:30px;
     text-align: center;
