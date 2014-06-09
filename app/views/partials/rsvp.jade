@@ -5,7 +5,24 @@
       p Enter the rsvp code on your invitation. If you are unable to locate the code or have misplaced it, please 
         a(href='mailto:rsvp@jdandkatrina.com') contact us
         |.
-      form  
-        input.rsvp-code-input(type="text", placeholder="Enter Code Here", max-length=5, required, ng-model="rsvpCode", ng-minlength="5", ng-maxlength="5", ng-change="checkForRSVPCode()", name="rsvp-input")
-        button.continue-btn(ng-click="validateCode()", ng-disabled="continueDisabled")
-          label Continue
+      ng-switch(on="state")
+        form.rsvp-code-form(ng-switch-when="step1")  
+          input.rsvp-code-input(type="text", placeholder="Enter Code Here", max-length=5, required, ng-model="rsvpCode", ng-minlength="5", ng-maxlength="5", ng-change="checkForRSVPCode()", name="rsvp-input")
+          button.continue-btn(ng-click="getRsvp()")
+            label Continue
+        form.rsvp-info-form(ng-switch-when="step2")
+          input.first-name
+          input.last-name
+          input.total-adults
+          button.continue-btn(ng-click="showPreSubmit()")
+            label Continue
+        form.rsvp-verify-form(ng-switch-when="step3")
+          p.first-name
+          p.last-name
+          p.total-adults
+          button.change-btn(ng-click="backToInfo()")
+            label Change
+          button.submit-btn(ng-click="showPreSubmit()")
+            label Submit
+        .completion(ng-switch-when="completion")
+          p Thank you for your RSVP! We cannot wait to celebrate with you on the big day. 
