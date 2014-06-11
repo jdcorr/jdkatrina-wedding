@@ -9,7 +9,7 @@ angular.module('jandkApp')
 	$scope.completion = 'completion';
 	$scope.state = $scope.step1;
 
-	$scope.rsvpCode = '';
+	$scope.rsvpCode = 'jd123';
 	$scope.continueDisabled = true;
 	$scope.continueBtn = angular.element(document.querySelector('.continue-btn'));
 
