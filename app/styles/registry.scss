@@ -14,44 +14,10 @@
 		margin-right: auto;
 	}
 
-	.d-btn.d-btn-freetype {
-		.d-btn-text {
-			font-family: 'Montserrat', sans-serif;
-			font-weight: normal;
-			text-shadow: none;
-			text-transform: uppercase;
-			font-size: 0.9em;
-			background-image: url('../images/dwollabg_blue.png');
-		}
-		.d-btn-icon {
-			display: none;
-		}
-		a {
-			color: #333;
-		}
-		input {
-			color: #333;
-			background: #fff;
-			margin-right: 10px;
-		}
-		display: block;
-		width: 300px;
-		background: #428bca;
-		padding: 0;
-		height: 38px;
-		-webkit-border-radius: 5px;
-		-moz-border-radius: 5px;
-		border-radius: 5px;
-		border: none;
-		/* border: 1px solid #c36002; */
-		-webkit-box-shadow: none;
-		-moz-box-shadow: none;
-		overflow: hidden;
-		text-decoration: none!important;
-		margin-top:30px;
-		margin-bottom:20px;
-		margin-left: auto;
+	.paypal-btn {
 		margin-right: auto;
+		margin-left: auto;
+		display: block;
 	}
 
 	@media (min-width: 1200px){
