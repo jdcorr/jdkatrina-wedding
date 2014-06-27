@@ -8,18 +8,21 @@ angular.module('jandkApp')
 	$scope.step3 = 'step3';
 	$scope.completion = 'completion';
 	$scope.state = $scope.step1;
+	$scope.rsvp = {'code':''};
 
-	$scope.rsvpCode = 'jd123';
-	$scope.continueDisabled = true;
+	$scope.continueEnabled = false;
 	$scope.continueBtn = angular.element(document.querySelector('.continue-btn'));
 
 	$scope.getRsvp = function() {
-		$scope.state = $scope.step2;
 
-		console.log($scope.rsvpCode);
+		if (!$scope.continueEnabled) return;
 
-		$http.get('/api/rsvps/'+$scope.rsvpCode).success(function(rsvp) {
+		console.log('getting rsvp for id: ' + $scope.rsvp.code);
+
+		$http.get('/api/rsvps/'+$scope.rsvp.code).success(function(rsvp) {
+			console.log(rsvp);
 			$scope.rsvp = rsvp;
+			$scope.state = $scope.step2;
 		});
 	};
 
@@ -32,10 +35,12 @@ angular.module('jandkApp')
 	};
 
 	$scope.checkForRsvpCode = function() {
-		if ($scope.rsvpCode) {
-			$scope.continueDisabled = false;
+		console.log($scope.rsvp.code);
+		if ($scope.rsvp.code) {
+			console.log($scope.rsvp.code);
+			$scope.continueEnabled = true;
 		} else {
-			$scope.continueDisabled = true;
+			$scope.continueEnabled = false;
 		}
 	};
 });

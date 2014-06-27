@@ -2,24 +2,36 @@
   h2 RSVP
   .dark-container  
     .rsvp-form
-      p Enter the rsvp code on your invitation. If you are unable to locate the code or have misplaced it, please 
-        a(href='mailto:rsvp@jdandkatrina.com') contact us
-        |.
       ng-switch(on="state")
-        form.rsvp-code-form(ng-switch-when="step1")  
-          input.rsvp-code-input(type="text", placeholder="Enter Code Here", max-length=5, required, ng-model="rsvpCode", ng-minlength="5", ng-maxlength="5", ng-change="checkForRSVPCode()", name="rsvp-input")
+        form.rsvp-code-form(ng-switch-when="step1") 
+          p Enter the rsvp code on your invitation. If you are unable to locate the code or have misplaced it, please 
+            a(href='mailto:rsvp@jdandkatrina.com') contact us
+            |. 
+          input.rsvp-code-input(ng-model="rsvp.code", placeholder="Enter Code Here", max-length=5, required, ng-minlength="4", ng-maxlength="6", ng-change="checkForRsvpCode()", name="rsvp-input")
           button.continue-btn(ng-click="getRsvp()")
             label Continue
         form.rsvp-info-form(ng-switch-when="step2")
-          input.first-name
-          input.last-name
-          input.total-adults
+          p Review the information below and update as needed, then click submit. Please 
+            a(href='mailto:rsvp@jdandkatrina.com') contact us 
+            | with any questions.
+          input.first-name(type="text", placeholder="First Name", ng-model="rsvp.firstName")
+          input.last-name(type="text", placeholder="Last Name", ng-model="rsvp.lastName")
+          input.email(type="email", placeholder="Email", ng-model="rsvp.email")
+          input.total-adults(type="number", placeholder="#", ng-model="rsvp.totalAdults", max=4, min=1, ng-show="rsvp.isAllowedGuests")
           button.continue-btn(ng-click="showPreSubmit()")
             label Continue
         form.rsvp-verify-form(ng-switch-when="step3")
-          p.first-name
-          p.last-name
-          p.total-adults
+          p Review the following info and click submit to complete your rsvp:
+          p Name: 
+            strong {{rsvp.firstName}} {{rsvp.lastName}}          
+          p(ng-if="({{rsvp.email}})") Email: 
+            strong {{rsvp.email}}
+          p Total Adults: 
+            strong {{rsvp.totalAdults}}
+          p Total Children: 
+            strong {{rsvp.totalChildren}}
+          p Total Infants: 
+            strong {{rsvp.totalInfants}}
           button.change-btn(ng-click="backToInfo()")
             label Change
           button.submit-btn(ng-click="showPreSubmit()")
