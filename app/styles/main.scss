@@ -58,6 +58,31 @@ h2 {
     font-family: "Voyage";
 }
 
+button {
+    display: inline-block;
+    margin: 10px auto;
+    -webkit-appearance: button;
+    cursor: pointer;
+    border-radius: 4px;
+    color: white;
+    line-height: 30px;
+    background-color: #428bca;
+    font-family: 'Montserrat', sans-serif;
+    border: solid #ccc 1px;
+    width: 120px;
+
+    &:hover {
+        background-color: #2C74B3;
+    }
+
+    span {
+        font-weight: normal;
+        text-transform: uppercase;
+        margin: 0;
+        cursor: pointer;
+    }
+}
+
 hr {
     border-color:#ccc;
     line-height: 1px;

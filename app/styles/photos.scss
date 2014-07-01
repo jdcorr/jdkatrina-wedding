@@ -6,9 +6,17 @@
 		margin: 30px 0;
 		padding: 30px 0 30px;
 		position:relative;
-		min-height:460px;
+		height:480px;
 		background-image: url(http://subtlepatterns.com/patterns/dark_wall.png);
 		background-repeat: repeat;
+
+		.slideshow {
+			display: block;
+			margin-right: auto;
+			margin-left: auto;
+			width: 98%;
+			overflow: hidden;
+		}
 
 		a {
 			display: block;
@@ -60,14 +68,18 @@
 		}
 
 		.slide {
-			width: 100%;
-			height: auto;
+			height: 100%;
+			width: 33.33%;
 			min-height:400px;
-			display:block;
-			background-image: url('../images/slideshow/03.jpg');
-			background-size: contain;
-			background-repeat: no-repeat;
-			background-position: center center;
+			display:inline-block;
+
+			img {
+				height: 100%;
+				width: auto;
+				display: block;
+				margin-left: auto;
+				margin-right: auto;
+			}
 		}
 
 		.slideshow-image {

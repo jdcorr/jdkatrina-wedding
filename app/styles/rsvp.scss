@@ -5,30 +5,45 @@
 		background: #fff;
 		padding: 30px 20px;
 		margin: 0 auto;
-		width: 65%;
+		width: 80%;
 		max-width: 500px;
+		//text-align: center;
+
+		label {
+			//float: left;
+			text-align: right;
+			margin-right: 15px;
+			width: 100px;
+		}
 
 		input {
 			height: 40px;
 			border-radius: 2px;
-			color: initial;
+			color: #3c3c3c;
 			letter-spacing: normal;
 			word-spacing: normal;
 			text-transform: none;
 			text-indent: 0px;
 			text-shadow: none;
-			display: block;
+			display: inline-block;
 			text-align: center;
 			margin: 10px auto;
 
 			&.email {
-				width: 80%;
+				width: 250px;
+			}
+
+			&.first-name, &.last-name {
+				display: inline-block;
 			}
 		}
 
-		button {
+		.change-btn {
+			margin-right: 20px;
+		}
+
+		span {
 			display: block;
-			margin: 10px auto;
 		}
 	}
 }                           
