@@ -3,10 +3,12 @@ include mixins
 #photos.container-full
   h2 Photos
   .slideshow-container.container-full
-    ul.slideshow
-      li.slide
-    a.paddle-left
-      span.glyphicon.glyphicon-chevron-left
-    a.paddle-right
-      span.glyphicon.glyphicon-chevron-right
+    .slideshow
+      .slide
+        img(src="images/slideshow/01.jpg")
+      .slide
+        img(src="images/slideshow/02.jpg")
+      .slide
+        img(src="images/slideshow/03.jpg")
+      
   +hRule('feather')
