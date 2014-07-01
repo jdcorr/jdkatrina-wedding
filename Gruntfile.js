@@ -261,7 +261,7 @@ module.exports = function (grunt) {
              '<%= yeoman.dist %>/views/{,*/}*.jade'],
       css: ['<%= yeoman.dist %>/public/styles/{,*/}*.css'],
       options: {
-        assetsDirs: ['<%= yeoman.dist %>/public']
+        assetsDirs: ['<%= yeoman.dist %>/public/**/']
       }
     },
 
@@ -520,7 +520,9 @@ module.exports = function (grunt) {
     'clean:dist',
     'bower-install',
     'useminPrepare',
-    'concurrent:dist',
+    //'concurrent:dist',
+    'svgmin',
+    'htmlmin',
     'autoprefixer',
     'concat',
     'ngmin',
