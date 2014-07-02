@@ -185,7 +185,7 @@ module.exports = function (grunt) {
             nodemon.on('config:update', function () {
               setTimeout(function () {
                 require('open')('http://localhost:8080/debug?port=5858');
-              }, 500);              
+              }, 500);  
             });
           }
         }
@@ -237,7 +237,7 @@ module.exports = function (grunt) {
           src: [
             '<%= yeoman.dist %>/public/scripts/{,*/}*.js',
             '<%= yeoman.dist %>/public/styles/{,*/}*.css',
-            '<%= yeoman.dist %>/public/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
+            //'<%= yeoman.dist %>/public/images/{,*/}*.{png,jpg,jpeg,gif,webp,svg}',
             '<%= yeoman.dist %>/public/styles/fonts/*'
           ]
         }
@@ -261,7 +261,7 @@ module.exports = function (grunt) {
              '<%= yeoman.dist %>/views/{,*/}*.jade'],
       css: ['<%= yeoman.dist %>/public/styles/{,*/}*.css'],
       options: {
-        assetsDirs: ['<%= yeoman.dist %>/public/**/']
+        assetsDirs: ['<%= yeoman.dist %>/public']
       }
     },
 
@@ -337,7 +337,7 @@ module.exports = function (grunt) {
             '*.{ico,png,txt}',
             '.htaccess',
             'bower_components/**/*',
-            'images/{,*/}*.{webp}',
+            'images/{,*/}*',
             'fonts/**/*'
           ]
         }, {
@@ -397,16 +397,16 @@ module.exports = function (grunt) {
     // By default, your `index.html`'s <!-- Usemin block --> will take care of
     // minification. These next options are pre-configured if you do not wish
     // to use the Usemin blocks.
-    // cssmin: {
-    //   dist: {
-    //     files: {
-    //       '<%= yeoman.dist %>/styles/main.css': [
-    //         '.tmp/styles/{,*/}*.css',
-    //         '<%= yeoman.app %>/styles/{,*/}*.css'
-    //       ]
-    //     }
-    //   }
-    // },
+    cssmin: {
+      dist: {
+        files: {
+          '<%= yeoman.dist %>/styles/main.css': [
+            '.tmp/styles/{,*/}*.css',
+            '<%= yeoman.app %>/styles/{,*/}*.css'
+          ]
+        }
+      }
+    },
     // uglify: {
     //   dist: {
     //     files: {
@@ -514,19 +514,20 @@ module.exports = function (grunt) {
       'autoprefixer',
       'karma'
     ]);
-  });  
+  });
 
   grunt.registerTask('build', [
     'clean:dist',
     'bower-install',
     'useminPrepare',
     //'concurrent:dist',
-    'svgmin',
-    'htmlmin',
+    'compass:dist',
+    //'htmlmin',
     'autoprefixer',
     'concat',
     'ngmin',
     'copy:dist',
+    'copy:styles',
     'cdnify',
     'cssmin',
     'uglify',

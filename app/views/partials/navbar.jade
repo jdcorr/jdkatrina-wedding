@@ -1,7 +1,7 @@
 .header(ng-controller='NavbarCtrl')
   img(src="images/logo.png" class="logo" alt="JD and Katrina Logo")
   p.date October 18, 2014
-  a.mobile-nav-btn(ng-click='toggleMobileNav()') Hit me 
+  a.mobile-nav-btn(ng-click='toggleMobileNav()') MENU
   nav
     ul.nav
       li(class='{{item.class}}', ng-repeat='item in menu', ng-class='{active: isActive(item.link)}')
