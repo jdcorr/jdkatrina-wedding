@@ -17,9 +17,9 @@ angular.module('jandkApp')
 
 		if (!$scope.continueEnabled) return;
 
-		console.log('getting rsvp for id: ' + $scope.rsvp.code);
+		console.log('getting rsvp for id: ' + $scope.rsvp.code.toUpperCase());
 
-		$http.get('/api/rsvps/'+$scope.rsvp.code).success(function(rsvp) {
+		$http.get('/api/rsvps/'+$scope.rsvp.code.toUpperCase()).success(function(rsvp) {
 			console.log(rsvp);
 			$scope.rsvp = rsvp;
 			$scope.state = $scope.step2;
@@ -32,6 +32,13 @@ angular.module('jandkApp')
 
 	$scope.backToInfo = function() {
 		$scope.state = $scope.step2;
+	};
+
+	$scope.showCompletion = function() {
+		$scope.state = $scope.completion;
+
+		// fire off confirmation
+		$http.get('/api/email/'+$scope.rsvp)
 	};
 
 	$scope.checkForRsvpCode = function() {

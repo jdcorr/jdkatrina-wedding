@@ -36,6 +36,10 @@
 			&.first-name, &.last-name {
 				display: inline-block;
 			}
+
+			&.rsvp-code-input {
+				text-transform: uppercase;
+			}
 		}
 
 		.change-btn {

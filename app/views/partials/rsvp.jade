@@ -48,7 +48,9 @@
             strong {{rsvp.totalInfants}}
           button.change-btn(ng-click="backToInfo()")
             span Change
-          button.submit-btn(ng-click="showPreSubmit()")
+          button.submit-btn(ng-click="showCompletion()")
             span Submit
         .completion(ng-switch-when="completion")
-          p Thank you for your RSVP! We cannot wait to celebrate with you on the big day. 
+          p Thank you for your RSVP! We look forward to celebrating with you on the big day. If anything comes up, please 
+            a(href='mailto:rsvp@jdandkatrina.com') contact us
+            |.
