@@ -388,7 +388,7 @@ module.exports = function (grunt) {
       },
       dist: [
         'compass:dist',
-        'imagemin',
+        //'imagemin',
         'svgmin',
         'htmlmin'
       ]
@@ -522,12 +522,12 @@ module.exports = function (grunt) {
     'useminPrepare',
     //'concurrent:dist',
     'compass:dist',
-    //'htmlmin',
+    'htmlmin',
     'autoprefixer',
     'concat',
     'ngmin',
     'copy:dist',
-    'copy:styles',
+    //'copy:styles',
     'cdnify',
     'cssmin',
     'uglify',
