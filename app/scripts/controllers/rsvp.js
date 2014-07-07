@@ -37,8 +37,12 @@ angular.module('jandkApp')
 	$scope.showCompletion = function() {
 		$scope.state = $scope.completion;
 
-		// fire off confirmation
-		$http.get('/api/email/'+$scope.rsvp)
+		// update record
+		$http.put('/api/rsvps/'+$scope.rsvp._id).success(function(rsvp) {
+			// fire off confirmation
+			$http.get('/api/email/'+$scope.rsvp.code);
+		});
+
 	};
 
 	$scope.checkForRsvpCode = function() {
