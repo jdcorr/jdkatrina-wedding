@@ -37,8 +37,13 @@ angular.module('jandkApp')
 	$scope.showCompletion = function() {
 		$scope.state = $scope.completion;
 
+		// format the rsvp model to an object and strip off _id
+		var upsertData = $scope.rsvp;
+		delete upsertData._id;
+		console.log(upsertData);
+
 		// update record
-		$http.put('/api/rsvps/'+$scope.rsvp._id).success(function(rsvp) {
+		$http.put('/api/rsvps/'+$scope.rsvp.code, upsertData).success(function(rsvp) {
 			// fire off confirmation
 			$http.get('/api/email/'+$scope.rsvp.code);
 		});
