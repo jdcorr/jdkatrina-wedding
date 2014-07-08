@@ -54,3 +54,9 @@
           p Thank you for your RSVP! We look forward to celebrating with you on the big day. If anything comes up, please 
             a(href='mailto:rsvp@jdandkatrina.com') contact us
             |.
+        .error(ng-switch-when="error")
+          p Sorry, there was an error. Please try again or  
+            a(href='mailto:rsvp@jdandkatrina.com') contact us
+            |.
+          button.try-again-btn(ng-click="backToStep1()")
+            span Try Again

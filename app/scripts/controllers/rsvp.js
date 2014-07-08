@@ -7,6 +7,7 @@ angular.module('jandkApp')
 	$scope.step2 = 'step2';
 	$scope.step3 = 'step3';
 	$scope.completion = 'completion';
+	$scope.error = 'error';
 	$scope.state = $scope.step1;
 	$scope.rsvp = {'code':''};
 
@@ -17,10 +18,7 @@ angular.module('jandkApp')
 
 		if (!$scope.continueEnabled) return;
 
-		console.log('getting rsvp for id: ' + $scope.rsvp.code.toUpperCase());
-
 		$http.get('/api/rsvps/'+$scope.rsvp.code.toUpperCase()).success(function(rsvp) {
-			console.log(rsvp);
 			$scope.rsvp = rsvp;
 			$scope.state = $scope.step2;
 		});
@@ -40,23 +38,32 @@ angular.module('jandkApp')
 		// format the rsvp model to an object and strip off _id
 		var upsertData = $scope.rsvp;
 		delete upsertData._id;
-		console.log(upsertData);
 
 		// update record
-		$http.put('/api/rsvps/'+$scope.rsvp.code, upsertData).success(function(rsvp) {
-			// fire off confirmation
-			$http.get('/api/email/'+$scope.rsvp.code);
-		});
-
+		$http.put('/api/rsvps/'+$scope.rsvp.code, upsertData)
+			.success(function(rsvp) {
+				if ($scope.rsvp.email && $scope.rsvp.email != '') $scope.sendConfirmEmail();
+			})
+			.error(function(data){
+				$scope.state = $scope.error;
+			});
 	};
 
+	$scope.sendConfirmEmail = function() {
+
+	}
+
 	$scope.checkForRsvpCode = function() {
-		console.log($scope.rsvp.code);
 		if ($scope.rsvp.code) {
-			console.log($scope.rsvp.code);
 			$scope.continueEnabled = true;
 		} else {
 			$scope.continueEnabled = false;
 		}
 	};
+
+	$scope.backToStep1 = function() {
+		// Reset to step 1
+		$scope.rsvp = {'code':''};
+		$scope.state = $scope.step1;
+	}
 });
