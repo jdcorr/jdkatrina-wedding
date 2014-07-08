@@ -38,6 +38,7 @@ angular.module('jandkApp')
 		// format the rsvp model to an object and strip off _id
 		var upsertData = $scope.rsvp;
 		delete upsertData._id;
+		upsertData.confirmed = true;
 
 		// update record
 		$http.put('/api/rsvps/'+$scope.rsvp.code, upsertData)
@@ -50,7 +51,8 @@ angular.module('jandkApp')
 	};
 
 	$scope.sendConfirmEmail = function() {
-
+		// on success, fire off confirmation
+		$http.get('/api/email/'+$scope.rsvp.code);
 	}
 
 	$scope.checkForRsvpCode = function() {

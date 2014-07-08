@@ -27,7 +27,7 @@ fs.readdirSync(modelsPath).forEach(function (file) {
 });
 
 // Populate empty DB with sample data
-//require('./lib/config/data/rsvp');
+require('./lib/config/data/rsvp');
 
 var app = express();
 

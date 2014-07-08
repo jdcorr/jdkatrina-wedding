@@ -1,19 +1,31 @@
 #rsvp {
 	text-align: center;
 
-	.rsvp-form {
+	.rsvp-wrapper {
 		background: #fff;
 		padding: 30px 20px;
 		margin: 0 auto;
 		width: 80%;
 		max-width: 500px;
+	}
+
+	.rsvp-form {
+		width: 80%;
+		max-width: 500px;
+		display: block;
+		margin-right: auto;
+		margin-left: auto;
 		//text-align: center;
 
+		.form-line {
+			float:left;
+			display:block;
+		}
+
 		label {
-			//float: left;
 			text-align: right;
 			margin-right: 15px;
-			width: 100px;
+			min-width: 100px;
 		}
 
 		input {
