@@ -52,7 +52,7 @@ angular.module('jandkApp')
 
 	$scope.sendConfirmEmail = function() {
 		// on success, fire off confirmation
-		$http.get('/api/email/'+$scope.rsvp.code);
+		$http.post('/api/email/'+$scope.rsvp.code);
 	}
 
 	$scope.checkForRsvpCode = function() {
