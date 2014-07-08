@@ -32,10 +32,10 @@
 	.hotel {
 		display: block;
 		border: solid 1px #ccc;
-		margin: 30px auto;
 		padding: 40px 10px;
+		min-height: 100%;
 		//@include shadowed(0, 0, 3px, #ccc);
-		width: 65%;
+		//width: 65%;
 		background: #fff;
 		text-align: center;
 	}
