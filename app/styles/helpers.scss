@@ -5,6 +5,10 @@
     //filter: "progid:DXImageTransform.Microsoft.Dropshadow(OffX="+$left+", OffY="+$top+", Color='"+$color+"')";
 }
 
+@mixin bordered($color) {
+	border: $color solid 1px;
+}
+
 @mixin no-select {
 	-webkit-touch-callout: none;
 	-webkit-user-select: none;

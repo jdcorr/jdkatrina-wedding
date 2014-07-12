@@ -6,3 +6,7 @@
 	     url('../fonts/Voyage.ttf')  format('truetype'),
 	     url('../fonts/Voyage.svg#Voyage') format('svg');
 }
+
+@mixin voyageFont() {
+	font-family: 'Voyage', serif;
+}

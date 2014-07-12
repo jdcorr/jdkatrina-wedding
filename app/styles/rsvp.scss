@@ -1,25 +1,41 @@
+@import 'helpers';
+@import 'fonts';
+
+
 #rsvp {
 	text-align: center;
 
 	.rsvp-wrapper {
 		background: #fff;
-		padding: 30px 20px;
+		padding: 4px 4px;
 		margin: 0 auto;
 		width: 80%;
 		max-width: 500px;
+
 	}
 
 	.rsvp-form {
-		width: 80%;
-		max-width: 500px;
+		// width: 80%;
+		// max-width: 500px;
 		display: block;
 		margin-right: auto;
 		margin-left: auto;
+		@include bordered(#c9c9c9);
+		width: 100%;
+		height: 100%;
+		padding: 20px;
 		//text-align: center;
 
 		.form-line {
-			float:left;
-			display:block;
+			display: block;
+			right: 0;
+			min-width: 300px;
+			text-align: right;
+
+			&.number-input {
+				width: 300px;
+				text-align: right;
+			}
 		}
 
 		label {
