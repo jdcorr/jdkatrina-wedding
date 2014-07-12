@@ -7,6 +7,7 @@ angular.module('jandkApp')
 	$scope.step2 = 'step2';
 	$scope.step3 = 'step3';
 	$scope.completion = 'completion';
+	$scope.completed = 'completed';
 	$scope.error = 'error';
 	$scope.state = $scope.step1;
 	$scope.rsvp = {'code':''};
@@ -20,7 +21,12 @@ angular.module('jandkApp')
 
 		$http.get('/api/rsvps/'+$scope.rsvp.code.toUpperCase()).success(function(rsvp) {
 			$scope.rsvp = rsvp;
-			$scope.state = $scope.step2;
+
+			if ($scope.rsvp.isCompleted) {
+				$scope.state = $scope.completed;
+			} else {
+				$scope.state = $scope.step2;
+			}
 		});
 	};
 
@@ -43,7 +49,7 @@ angular.module('jandkApp')
 		// update record
 		$http.put('/api/rsvps/'+$scope.rsvp.code, upsertData)
 			.success(function(rsvp) {
-				if ($scope.rsvp.email && $scope.rsvp.email != '') $scope.sendConfirmEmail();
+				if ($scope.rsvp.email && $scope.rsvp.email !== '') $scope.sendConfirmEmail();
 			})
 			.error(function(data){
 				$scope.state = $scope.error;

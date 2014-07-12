@@ -5,57 +5,65 @@
       .rsvp-form
         ng-switch(on="state")
           form.rsvp-code-form(ng-switch-when="step1") 
-            p Enter the rsvp code on your invitation. If you are unable to locate the code or have misplaced it, please 
-              a(href='mailto:rsvp@jdandkatrina.com') contact us
-              |. 
+            p Enter your RSVP code on located on the invitation insert. If you encounter any problems, please 
+              a(href='mailto:rsvp@jdandkatrina.com') contact us 
+              | . 
             input.rsvp-code-input(ng-model="rsvp.code", placeholder="Enter Code Here", max-length=5, required, ng-minlength="4", ng-maxlength="6", ng-change="checkForRsvpCode()", name="rsvp-input")
             br
-            button.continue-btn(ng-click="getRsvp()")
+            button(ng-click="getRsvp()")
               span Continue
           form.rsvp-info-form.clearfix(ng-switch-when="step2")
-            p Review the information below and update as needed, then click submit. Please 
+            p Review and update your info as needed. If you encounter any problems, please 
               a(href='mailto:rsvp@jdandkatrina.com') contact us 
-              | with any questions.
+              | .
             .form-line
               label First Name:
               input.first-name(type="text", placeholder="First Name", ng-model="rsvp.firstName")
+              br
             .form-line
               label Last Name:
               input.last-name(type="text", placeholder="Last Name", ng-model="rsvp.lastName")
+              br
             .form-line(ng-if="rsvp.isAllowedGuests")
               label Total Adults:
               input.total-adults(type="number", ng-model="rsvp.totalAdults", max=4, min=1, ng-show="rsvp.isAllowedGuests")
+              br
             .form-line(ng-if="rsvp.isAllowedGuests")
-              label Total Children (10 and under):
+              label Total Children br(10 and under):
               input.total-children(type="number", ng-model="rsvp.totalChildren", max=4, min=0, ng-show="rsvp.isAllowedGuests")
+              br
             .form-line(ng-if="rsvp.isAllowedGuests")  
               label Total Infants (3 and under):  
               input.total-infants(type="number", ng-model="rsvp.totalInfants", max=4, min=0, ng-show="rsvp.isAllowedGuests")
+              br
             .form-line
               label Email: 
-              input.email(type="email", placeholder="Email (optional)", ng-model="rsvp.email")   
+              input.email(type="email", placeholder="Email (optional)", ng-model="rsvp.email") 
+              br  
             button.continue-btn(ng-click="showPreSubmit()")
               span Continue
           form.rsvp-verify-form(ng-switch-when="step3")
             p Review the following info and click submit to complete your rsvp:
-            p Name: 
+            h4 Name: 
               strong {{rsvp.firstName}} {{rsvp.lastName}}          
-            p(ng-if="rsvp.email") Email: 
+            h4(ng-if="rsvp.email") Email: 
               strong {{rsvp.email}}
-            p(ng-if="rsvp.isAllowedGuests") Total Adults: 
+            h4(ng-if="rsvp.isAllowedGuests") Total Adults: 
               strong {{rsvp.totalAdults}}
-            p(ng-if="rsvp.totalChildren") Total Children: 
+            h4(ng-if="rsvp.totalChildren") Total Children: 
               strong {{rsvp.totalChildren}}
-            p(ng-if="rsvp.totalInfants") Total Infants: 
+            h4(ng-if="rsvp.totalInfants") Total Infants: 
               strong {{rsvp.totalInfants}}
             button.change-btn(ng-click="backToInfo()")
               span Change
             button.submit-btn(ng-click="showCompletion()")
               span Submit
           .completion(ng-switch-when="completion")
-            p Thank you for your RSVP! We look forward to celebrating with you on the big day. If anything comes up, please 
+            h1.voyage-font Thank you
+            h4 We look forward to celebrating with you on the big day. If anything changes, please 
               a(href='mailto:rsvp@jdandkatrina.com') contact us
               |.
+            br
             p In the meantime, here are some fun peacock facts: 
             p A baby peacock is called a peachick.
             p A group of peacocks is called a party, muster or ostentation.
@@ -64,7 +72,11 @@
             p Peacocks also vibrate their tails and make a rattling sound to show off.
             p Only male peacocks have colorful plumage.
             p The peacock is India's national bird.
-
+          .completed(ng-switch-when="completed")
+            h1.voyage-font Thank you
+            h4 You've already completed your RSVP. If there is an issue or something has changed, please 
+              a(href='mailto:rsvp@jdandkatrina.com') contact us
+              |.
           .error(ng-switch-when="error")
             p Sorry, an unexpected error occurred. Please try again or  
               a(href='mailto:rsvp@jdandkatrina.com') contact us
