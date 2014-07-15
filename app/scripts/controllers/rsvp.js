@@ -22,7 +22,7 @@ angular.module('jandkApp')
 		$http.get('/api/rsvps/'+$scope.rsvp.code.toUpperCase()).success(function(rsvp) {
 			$scope.rsvp = rsvp;
 
-			if ($scope.rsvp.isCompleted) {
+			if ($scope.rsvp.confirmed) {
 				$scope.state = $scope.completed;
 			} else {
 				$scope.state = $scope.step2;
@@ -41,6 +41,9 @@ angular.module('jandkApp')
 	$scope.showCompletion = function() {
 		$scope.state = $scope.completion;
 
+		// Check if attending or not
+		if ($scope.rsvp.cannotAttend) $scope.rsvp.totalAdults = $scope.rsvp.totalChildren = $scope.rsvp.totalInfants = 0;
+
 		// format the rsvp model to an object and strip off _id
 		var upsertData = $scope.rsvp;
 		delete upsertData._id;
@@ -49,7 +52,7 @@ angular.module('jandkApp')
 		// update record
 		$http.put('/api/rsvps/'+$scope.rsvp.code, upsertData)
 			.success(function(rsvp) {
-				if ($scope.rsvp.email && $scope.rsvp.email !== '') $scope.sendConfirmEmail();
+				if ($scope.rsvp.email && !$scope.rsvp.cannotAttend && $scope.rsvp.email !== '') $scope.sendConfirmEmail();
 			})
 			.error(function(data){
 				$scope.state = $scope.error;
