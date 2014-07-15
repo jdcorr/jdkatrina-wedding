@@ -28,7 +28,7 @@
 
 		.form-line {
 			display: block;
-			right: 0;
+			margin-right: 30px;
 			min-width: 300px;
 			text-align: right;
 		}
@@ -43,11 +43,14 @@
 
 		.continue-btn {
 			float: right;
+			margin-right: 30px;
 		}
 
 		input {
 			height: 40px;
-			border-radius: 2px;
+			-webkit-border-radius: 5px;
+			-moz-border-radius: 5px;
+			border-radius: 5px;			
 			color: #3c3c3c;
 			letter-spacing: normal;
 			word-spacing: normal;
@@ -57,7 +60,6 @@
 			display: inline-block;
 			text-align: center;
 			margin: 10px auto;
-			
 			width: 50%;
 
 			&.first-name, &.last-name {
@@ -66,6 +68,11 @@
 
 			&.rsvp-code-input {
 				text-transform: uppercase;
+			}
+
+			&.cannot-attend-checkbox {
+				top: 12px;
+				position: relative;
 			}
 		}
 

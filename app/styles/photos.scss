@@ -4,47 +4,51 @@
 	@include no-select;
 	.slideshow-container {
 		margin: 30px 0;
-		padding: 30px 0 30px;
-		position:relative;
-		height:480px;
+		position: relative;
+		height: 500px;
 		background-image: url(http://subtlepatterns.com/patterns/dark_wall.png);
 		background-repeat: repeat;
+		overflow: hidden;
 
 		.slideshow {
 			display: block;
 			margin-right: auto;
 			margin-left: auto;
-			width: 98%;
+			width: 1000%;
 			overflow: hidden;
+			transition: left 0.5s;
+			position: absolute;
+			left: 0;
 		}
 
 		a {
 			display: block;
 			width: 50px;
-			height: 50px;
+			height: 80px;
 			opacity: 0.5;
-			border-radius: 50%;
+			border-radius: 4px;
 			cursor: pointer;
-			color: #333;
+			color: #ccc;
+			background: #333;
 			
 			&.paddle-left{
 				z-index:100;
 				position: absolute;
 				top:50%;
-				left:0;
-				margin-top:-25px;
+				left:20%;
+				margin-top:-40px;
 			}
 
 			&.paddle-right{
 				z-index:200;
 				position: absolute;
 				top:50%;
-				right:0;
-				margin-top:-25px;
+				right:20%;
+				margin-top:-40px;
 			}
 
 			.glyphicon {
-				line-height: 50px;
+				line-height: 80px;
 				margin: 0 auto; 				
 				width: 40px;
 				height: 40px;
@@ -68,24 +72,13 @@
 		}
 
 		.slide {
-			height: 100%;
-			width: 33.33%;
-			min-height:400px;
-			display:inline-block;
-
-			img {
-				height: 100%;
-				width: auto;
-				display: block;
-				margin-left: auto;
-				margin-right: auto;
-			}
-		}
-
-		.slideshow-image {
-			width:100%;
-			display:block;
-			position:absolute;
+			height: 500px;
+			width: 10%;
+			display: inline-block;
+			overflow: hidden;
+			background-size: contain;
+			background-position: center center;
+			background-repeat: no-repeat;
 		}
 	}	
 }
