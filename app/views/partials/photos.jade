@@ -1,14 +1,13 @@
 include mixins
 
-#photos.container-full
+#photos.container-full(ng-controller='PhotosCtrl')
   h2 Photos
-  .slideshow-container.container-full
+  .slideshow-container
+    a.paddle-left(ng-click="prevSlide()")
+      span.glyphicon.glyphicon-chevron-left
+    a.paddle-right(ng-click="nextSlide()")
+      span.glyphicon.glyphicon-chevron-right
     .slideshow
-      .slide
-        img(src="images/slideshow/01.jpg")
-      .slide
-        img(src="images/slideshow/02.jpg")
-      .slide
-        img(src="images/slideshow/03.jpg")
+      .slide(ng-repeat='item in slides', style='background-image:url("{{item.image}}")')
       
   +hRule('feather')

@@ -3,10 +3,14 @@ include mixins
 #wedding(ng-controller='WeddingCtrl').container-full
   .container
     h2 The Wedding
-    p We are very much looking forward to sharing the big day with friends and family. If it proves to be anything like our time together, it will be full of great times, laughs, and our loved ones. 
-    p Beach Volleyball: Asilomar has a volleyball court just waiting for you on the beach. Bring your own volleyball or stop in the Park Store to borrow one of ours. The court can be reserved through our Front Desk. Court usage is complimentary but a $5 refundable deposit is required for the use of our volleyball.
-    p Biking: Trail riding or beach riding - why not do both?  If you don't have your own bike, we have bikes available for rent at the Park Store.
+    p We are very much looking forward to sharing our big day with friends and family. If it proves to be anything like our time together, it will be full of great times, laughs, and our loved ones. 
+    p Beach Volleyball: Asilomar has a volleyball court just waiting for you on the beach. Bring your own volleyball or stop in the Park Store to borrow one of theirs. The court can be reserved through the Front Desk. Court usage is complimentary but a $5 refundable deposit is required for the use of the volleyball.
+    p Biking: Trail riding or beach riding - why not do both?  If you don't have your own bike, Asilomar has bikes available for rent at the Park Store.
     p Golf: There are numerous golf courses - Pacific Grove is directly north of Pebble Beach.
+    br
+    h2 Bonfire
+    p Please join us for smores and a bonfire on Friday evening at the Asilomar fire pit. Smores will be provided - no outside food or alcohol is permitted on the premises.
+    br
     .ceremony-info.col-md-6
       h2 Ceremony
       +hRule('feather')
@@ -14,62 +18,69 @@ include mixins
     .reception.col-md-6
       h2 Reception
       +hRule('toast')
-      p Immediately following the ceremony, a reception will take place just a short walk across the street and down the boardwalk that meanders through the 25 acres of restored sand dune ecosystem leading to Asilomar Conference Center. Please follow the path to Merrill Hall. There is limited street parking at the beach so it is suggested to arrive early and park at the B Lot near Merrill Hall. The walk to the beach is less than 10 min. The trail is very accessible and a beach wheelchair is available upon request.
+      p Immediately following the ceremony, a reception will take place just a short walk across the street and down the boardwalk that meanders through the 25 acres of restored sand dune ecosystem leading to Asilomar Conference Center. Please follow the path to Merrill Hall. There is limited street parking at the beach so it is suggested that you arrive early and park in Lot B near Merrill Hall. The walk to the beach is less than 10 minutes. The trail is very accessible and a beach wheelchair is available upon request.
         a(href="http://www.visitasilomar.com/media/21863/Asilomar%20Grounds%20Map%202014.pdf") View the Asilomar map
         |  for more info.
   .container-full
     google-map(center="map.center" zoom="map.zoom" draggable="true" options="map.options")
     h2 Accomodations
-    .dark-container
-      .container-full 
-        .hotel.asilomar.col-md-3
-          h4 Asilomar Conference Center
-          p. 
-            It is best to book Asilomar online. 
-            Rooms run from 155-210 a night depending in the view and number of beds. 
-            They have a pool but no hot tub 
-            Here are some other options within walking distance. 
-          a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
-        .hotel.pacificgardeninns.col-md-3
-          h4 Pacific Gardens Inn  
-          p.  
-            Pets are allowed at this location. This hotel offers a hot tub, but no pool.
-            The rehearsal dinner will take place here for the wedding party and immediate family. 
-            831-646-9414
-          a.btn(href="http://pacificgardensinn.com/") More info
-        .hotel.bestwestern.col-md-3
-          h4 Howard Johnson Inn 
-          p.
-            $135 Th 
-            $155 Friday-Sat 
-            No Pool here 
-          a.btn(href="http://www.montereyhojo.com/") More info
-        .hotel.rosedaleinn.col-md-3
-          h4 Rosedale Inn  
-          p.  
-            No pool 
-            $140 Th 
-            $200 Friday-Sat 
-            For one bed 
-            2 queens in $207 
-            King Suite $225 
-            These rates are with AAA I believe. 
-            We have rooms saved here already.
-            831-646-9414   
-          a.btn(href="http://www.rosedaleinn.com/") More info
-        .hotel.deerhaveninn.col-md-3
-          h4 Deer Haven Inn 
-          p.
-            No pool. 
-            $120-145 Th 
-            $125-155 Friday-Sat. 
-            Prices vary between one king and 2 queens.
-            831-373-7784   
-          a.btn(href="http://http://www.parks.ca.gov/") More info
-        .hotel.camping.col-md-3
-          h4 Camping
-          p Please note: Asilomar State Beach does NOT have campground facilities. Motorhomes and campers are not allowed to park along the conference ground perimeter and will be cited.
-          p. 
-            Local campgrounds are located at:  City of Monterey, Monterey County Parks, in addition to private campgrounds in Marina and Carmel Valley. The closest California State Park campground is located in Big Sur.
-          a.btn(href="http://www.deerhaveninn.com/") More info
+    .dark-container.container-full
+      .container
+        .row
+          .hotel.asilomar.col-md-4
+            .hotel-content
+              h4 Asilomar Conference Center
+              p. 
+                It is best to book Asilomar online. 
+                Rooms run from 155-210 a night depending in the view and number of beds. 
+                They have a pool but no hot tub and many other amenities like pool tables, a volleyball court, and bike rentals. 
+              a.btn(href="https://reservations.ahlsmsworld.com/Asilomar/Plan-Your-Trip/Accommodation-Search/Result") More info
+          .hotel.pacificgardeninns.col-md-4
+            .hotel-content
+              h4 Pacific Gardens Inn  
+              p.  
+                Pets are allowed at this location. This hotel offers a hot tub, but no pool.
+                The rehearsal dinner will take place here for the wedding party and immediate family. 
+                831-646-9414
+              a.btn(href="http://pacificgardensinn.com/") More info
+          .hotel.bestwestern.col-md-4
+            .hotel-content
+              h4 Howard Johnson Inn 
+              p.
+                $135 Th 
+                $155 Friday-Sat 
+                No Pool here 
+              a.btn(href="http://www.montereyhojo.com/") More info
+        .row
+          .hotel.rosedaleinn.col-md-4
+            .hotel-content
+              h4 Rosedale Inn  
+              p.  
+                No pool 
+                $140 Th 
+                $200 Friday-Sat 
+                For one bed 
+                2 queens in $207 
+                King Suite $225 
+                These rates are with AAA I believe. 
+                We have rooms saved here already.
+                831-646-9414   
+              a.btn(href="http://www.rosedaleinn.com/") More info
+          .hotel.deerhaveninn.col-md-4
+            .hotel-content
+              h4 Deer Haven Inn 
+              p.
+                No pool. 
+                $120-145 Th 
+                $125-155 Friday-Sat. 
+                Prices vary between one king and 2 queens.
+                831-373-7784   
+              a.btn(href="http://www.deerhaveninn.com/") More info
+          .hotel.camping.col-md-4
+            .hotel-content
+              h4 Camping
+              p Please note: Asilomar State Beach does NOT have campground facilities. Motorhomes and campers are not allowed to park along the conference ground perimeter and will be cited.
+              p. 
+                Local campgrounds are located at:  City of Monterey, Monterey County Parks, in addition to private campgrounds in Marina and Carmel Valley. The closest California State Park campground is located in Big Sur (45+ min drive).
+              a.btn(href="http://http://www.parks.ca.gov/") More info  
   +hRule('toast')
