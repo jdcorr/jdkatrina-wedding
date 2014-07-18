@@ -1,0 +1,11 @@
+#guestlist(ng-controller='GuestlistCtrl').container
+  h1 Wedding Guestlist
+  h2 Confirmed
+    div(ng-repeat="rsvp in confirmedRsvps")
+      h4 {{rsvp.firstName}} {{rsvp.lastName}} 
+        span(ng-if="rsvp.totalAdults > 0" style="font-weight:normal; font-size: 0.8em;") Adults: {{rsvp.totalAdults}} 
+        span(ng-if="rsvp.totalChildren > 0" style="font-weight:normal; color:#ccc; font-size: 0.8em;") Children: {{rsvp.totalChildren}} 
+        span(ng-if="rsvp.totalInfants > 0" style="font-weight:normal; font-size: 0.8em;") Infants: {{rsvp.totalInfants}} 
+      
+  h3 Declined
+    div(ng-repeat="rsvp in declinedRsvps")

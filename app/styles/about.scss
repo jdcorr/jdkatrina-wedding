@@ -9,6 +9,10 @@
 		width:70%;
 	}
 
+	.row:first-child {
+		min-height: 420px;
+	}
+
 	.main-image {
 		background-image: url('../images/main.jpg');
 		background-size: cover;
@@ -33,6 +37,10 @@
 			height: 500px;
 		}
 
+		.row:first-child {
+			min-height: 320px;
+		}
+
 		margin-top: -30px;
 	}
 
@@ -41,6 +49,11 @@
 		.main-image {
 			height: 400px;
 		}
+
+		.row:first-child {
+			min-height: 200px;
+		}
+
 		margin-top: -20px;
 	}
 }

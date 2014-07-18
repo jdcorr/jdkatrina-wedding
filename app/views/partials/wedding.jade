@@ -2,15 +2,18 @@ include mixins
 
 #wedding(ng-controller='WeddingCtrl').container-full
   .container
-    h2 The Wedding
-    p We are very much looking forward to sharing our big day with friends and family. If it proves to be anything like our time together, it will be full of great times, laughs, and our loved ones. 
-    p Beach Volleyball: Asilomar has a volleyball court just waiting for you on the beach. Bring your own volleyball or stop in the Park Store to borrow one of theirs. The court can be reserved through the Front Desk. Court usage is complimentary but a $5 refundable deposit is required for the use of the volleyball.
-    p Biking: Trail riding or beach riding - why not do both?  If you don't have your own bike, Asilomar has bikes available for rent at the Park Store.
-    p Golf: There are numerous golf courses - Pacific Grove is directly north of Pebble Beach.
-    br
-    h2 Bonfire
-    p Please join us for smores and a bonfire on Friday evening at the Asilomar fire pit. Smores will be provided - no outside food or alcohol is permitted on the premises.
-    br
+    .main-wedding
+      h2 The Wedding
+      p We are very much looking forward to sharing our big day with friends and family. If it proves to be anything like our time together, it will be full of great times, laughs, and our loved ones. 
+      p Beach Volleyball: Asilomar has a volleyball court just waiting for you on the beach. Bring your own volleyball or stop in the Park Store to borrow one of theirs. The court can be reserved through the Front Desk. Court usage is complimentary but a $5 refundable deposit is required for the use of the volleyball.
+      p Biking: Trail riding or beach riding - why not do both?  If you don't have your own bike, Asilomar has bikes available for rent at the Park Store.
+      p Golf: There are numerous golf courses - Pacific Grove is directly north of Pebble Beach.
+      br
+    .bonfire
+      h2 Bonfire
+      +hRule('toast')
+      p Please join us for smores and a bonfire at 7:30pm on Friday evening at the Asilomar fire pit. Smores will be provided - no outside food or alcohol is permitted on the premises.
+      br
     .ceremony-info.col-md-6
       h2 Ceremony
       +hRule('feather')
@@ -18,8 +21,8 @@ include mixins
     .reception.col-md-6
       h2 Reception
       +hRule('toast')
-      p Immediately following the ceremony, a reception will take place just a short walk across the street and down the boardwalk that meanders through the 25 acres of restored sand dune ecosystem leading to Asilomar Conference Center. Please follow the path to Merrill Hall. There is limited street parking at the beach so it is suggested that you arrive early and park in Lot B near Merrill Hall. The walk to the beach is less than 10 minutes. The trail is very accessible and a beach wheelchair is available upon request.
-        a(href="http://www.visitasilomar.com/media/21863/Asilomar%20Grounds%20Map%202014.pdf") View the Asilomar map
+      p Immediately following the ceremony, a reception will take place just a short walk across the street and down the boardwalk that meanders through the 25 acres of restored sand dune ecosystem leading to Asilomar Conference Center. Please follow the path to Merrill Hall. There is limited street parking at the beach so it is suggested that you arrive early and park in Lot B near Merrill Hall. The walk to the beach is less than 10 minutes. The trail is very accessible and a beach wheelchair is available upon request. 
+        a(href="http://www.visitasilomar.com/media/21863/Asilomar%20Grounds%20Map%202014.pdf" target="_blank") View the Asilomar map
         |  for more info.
   .container-full
     google-map(center="map.center" zoom="map.zoom" draggable="true" options="map.options")

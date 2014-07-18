@@ -13,6 +13,10 @@ angular.module('jandkApp', [
         templateUrl: 'partials/main',
         controller: 'MainCtrl'
       })
+      .when('/guests', {
+        templateUrl: 'partials/guestlist',
+        controller: 'GuestlistCtrl'
+      })
       .otherwise({
         redirectTo: '/'
       });
