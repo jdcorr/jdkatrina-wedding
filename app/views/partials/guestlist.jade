@@ -6,6 +6,8 @@
         span(ng-if="rsvp.totalAdults > 0" style="font-weight:normal; font-size: 0.8em;") Adults: {{rsvp.totalAdults}} 
         span(ng-if="rsvp.totalChildren > 0" style="font-weight:normal; color:#ccc; font-size: 0.8em;") Children: {{rsvp.totalChildren}} 
         span(ng-if="rsvp.totalInfants > 0" style="font-weight:normal; font-size: 0.8em;") Infants: {{rsvp.totalInfants}} 
-      
+  h4 Total Adults: {{totalConfirmedAdults}}
+  h4 Total Children: {{totalConfirmedChildren}}
+  h4 Total Infants: {{totalConfirmedInfants}}
   h3 Declined
     div(ng-repeat="rsvp in declinedRsvps")
