@@ -1,5 +1,6 @@
 #guestlist(ng-controller='GuestlistCtrl').container
   h1 Wedding Guestlist
+  h4 Total Invitees: {{totalInvitees}}
   h2 Confirmed
     div(ng-repeat="rsvp in confirmedRsvps")
       h4 {{rsvp.firstName}} {{rsvp.lastName}} 
@@ -11,3 +12,4 @@
   h4 Total Infants: {{totalConfirmedInfants}}
   h3 Declined
     div(ng-repeat="rsvp in declinedRsvps")
+      h4 {{rsvp.firstName}} {{rsvp.lastName}} 
